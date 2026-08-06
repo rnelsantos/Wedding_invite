@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join us for the fairytale wedding of Jude & Nicaela." />
+    <title>Jude &amp; Nicaela — A Fairytale Wedding</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#top" class="nav__brand">J &amp; N</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#savethedate">Save the Date</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="hero__stars" aria-hidden="true"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__eyebrow">✨ Once upon a time ✨</p>
+            <h1 class="hero__names">Jude <span>&amp;</span> Nicaela</h1>
+            <p class="hero__tagline">request the pleasure of your company</p>
+            <div class="hero__date">
+                <span>Saturday</span>
+                <span class="hero__date-main">September 12, 2026</span>
+                <span>Santa Barbara, California</span>
+            </div>
+            <a href="#rsvp" class="btn btn--light">RSVP Now</a>
+        </div>
+        <svg class="hero__castle" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+            <path
+                fill="#1c1440"
+                d="M0,220 L0,150 L40,150 L40,110 L70,110 L70,150 L110,150 L110,90 L130,70 L150,90 L150,150 L190,150
+                   L190,120 L210,120 L210,150 L260,150 L260,60 L280,40 L285,20 L290,40 L295,20 L300,40 L305,60
+                   L305,150 L350,150 L350,100 L370,100 L370,150 L420,150 L420,130 L440,130 L440,150 L480,150
+                   L480,70 L500,50 L520,70 L520,150 L560,150 L560,110 L580,110 L580,150 L620,150 L620,90 L640,90
+                   L640,150 L690,150 L690,55 L705,35 L710,15 L715,35 L720,15 L725,35 L740,55 L740,150 L790,150
+                   L790,120 L810,120 L810,150 L850,150 L850,100 L870,100 L870,150 L910,150 L910,70 L930,50
+                   L950,70 L950,150 L1000,150 L1000,110 L1020,110 L1020,150 L1060,150 L1060,90 L1080,90 L1080,150
+                   L1130,150 L1130,120 L1150,120 L1150,150 L1200,150 L1200,220 Z"
+            ></path>
+        </svg>
+        <div class="hero__scroll" aria-hidden="true">
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Countdown -->
+    <section class="countdown" aria-label="Countdown to the wedding">
+        <div class="countdown__item"><span id="cd-days">00</span><small>Days</small></div>
+        <div class="countdown__item"><span id="cd-hours">00</span><small>Hours</small></div>
+        <div class="countdown__item"><span id="cd-mins">00</span><small>Minutes</small></div>
+        <div class="countdown__item"><span id="cd-secs">00</span><small>Seconds</small></div>
+    </section>
+
+    <!-- Save the Date Video -->
+    <section class="section savethedate" id="savethedate">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">👑 A tale worth telling 👑</p>
+            <h2 class="section__title">Save the Date</h2>
+        </div>
+        <div class="savethedate__wrap reveal">
+            <div class="savethedate__frame" id="videoFrame">
+                <!-- Placeholder shown until js/config.js#saveTheDateVideoUrl is set -->
+                <div class="savethedate__placeholder" id="videoPlaceholder">
+                    <div class="savethedate__play">▶</div>
+                    <p>Our Save-the-Date video is being written…</p>
+                    <span>Check back soon for the next chapter!</span>
+                </div>
+            </div>
+            <p class="savethedate__caption">
+                Once our film is ready, it will appear right here — pop the popcorn! 🍿
+            </p>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section story" id="story">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">How our story began</p>
+            <h2 class="section__title">Once Upon a Time</h2>
+        </div>
+        <div class="story__grid">
+            <div class="story__card reveal">
+                <div class="story__icon">🌟</div>
+                <h3>The First Hello</h3>
+                <p>
+                    We met on a rainy afternoon in a little coffee shop downtown, both
+                    reaching for the last blueberry muffin. Neither of us got the muffin,
+                    but we got something far better.
+                </p>
+            </div>
+            <div class="story__card reveal">
+                <div class="story__icon">🗝️</div>
+                <h3>The Adventure</h3>
+                <p>
+                    From spontaneous road trips to quiet Sunday mornings, every moment
+                    together has felt like magic. We've laughed, grown, and dreamed side
+                    by side.
+                </p>
+            </div>
+            <div class="story__card reveal">
+                <div class="story__icon">💍</div>
+                <h3>Happily Ever After</h3>
+                <p>
+                    On a cliff overlooking the Pacific, with the sun melting into the
+                    ocean, Jude got down on one knee. Through happy tears, Nicaela said
+                    yes — and our fairytale begins.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Schedule -->
+    <section class="section program" id="program">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">The story of our day</p>
+            <h2 class="section__title">Program Schedule</h2>
+        </div>
+        <div class="program__timeline">
+            <div class="program__item reveal">
+                <div class="program__dot" aria-hidden="true">🏰</div>
+                <div class="program__body">
+                    <span class="program__time">3:00 PM</span>
+                    <h3>Guests Arrive</h3>
+                    <p>Welcome to the castle grounds — find your seat among the roses.</p>
+                </div>
+            </div>
+            <div class="program__item reveal">
+                <div class="program__dot" aria-hidden="true">💍</div>
+                <div class="program__body">
+                    <span class="program__time">4:00 PM</span>
+                    <h3>The Ceremony</h3>
+                    <p>Jude &amp; Nicaela say "I do" beneath the garden arch.</p>
+                </div>
+            </div>
+            <div class="program__item reveal">
+                <div class="program__dot" aria-hidden="true">🥂</div>
+                <div class="program__body">
+                    <span class="program__time">5:00 PM</span>
+                    <h3>Cocktail Hour</h3>
+                    <p>Enchanted bites &amp; bubbly while the newlyweds steal a moment away.</p>
+                </div>
+            </div>
+            <div class="program__item reveal">
+                <div class="program__dot" aria-hidden="true">🍽️</div>
+                <div class="program__body">
+                    <span class="program__time">6:00 PM</span>
+                    <h3>Grand Ball &amp; Dinner</h3>
+                    <p>A feast fit for royalty in the Grand Ballroom.</p>
+                </div>
+            </div>
+            <div class="program__item reveal">
+                <div class="program__dot" aria-hidden="true">✨</div>
+                <div class="program__body">
+                    <span class="program__time">8:00 PM</span>
+                    <h3>First Dance &amp; Dancing</h3>
+                    <p>The clock strikes magic — join us on the dance floor!</p>
+                </div>
+            </div>
+            <div class="program__item reveal">
+                <div class="program__dot" aria-hidden="true">🎆</div>
+                <div class="program__body">
+                    <span class="program__time">11:00 PM</span>
+                    <h3>Send-Off</h3>
+                    <p>A sparkler farewell as our happily ever after begins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details -->
+    <section class="section details" id="details">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">Save the moment</p>
+            <h2 class="section__title">Wedding Details</h2>
+        </div>
+        <div class="details__grid">
+            <div class="details__card reveal">
+                <div class="details__icon">💍</div>
+                <h3>Ceremony</h3>
+                <p class="details__time">4:00 PM</p>
+                <p>Enchanted Castle Estate<br />1260 Channel Drive, Santa Barbara, CA</p>
+            </div>
+            <div class="details__card reveal">
+                <div class="details__icon">🥂</div>
+                <h3>Reception</h3>
+                <p class="details__time">6:00 PM</p>
+                <p>Grand Ballroom, Enchanted Castle Estate<br />Dinner, dancing &amp; celebration</p>
+            </div>
+            <div class="details__card reveal">
+                <div class="details__icon">👑</div>
+                <h3>Dress Code</h3>
+                <p class="details__time">Fairytale Formal</p>
+                <p>Cocktail &amp; formal attire<br />Garden-friendly footwear recommended</p>
+            </div>
+        </div>
+
+        <div class="details__calendar reveal">
+            <p>Don't want to forget? Add our big day to your calendar.</p>
+            <a href="#" id="addToCalendar" class="btn btn--dark" target="_blank" rel="noopener">
+                <span class="btn__gcal">📅</span> Add to Google Calendar
+            </a>
+        </div>
+    </section>
+
+    <!-- Location / Google Maps -->
+    <section class="section location" id="location">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">Find your way to the castle</p>
+            <h2 class="section__title">The Venue</h2>
+        </div>
+        <div class="location__wrap reveal">
+            <div class="location__map">
+                <!-- Google Maps embed. Replace the query with your exact venue. -->
+                <iframe
+                    title="Wedding venue map"
+                    src="https://www.google.com/maps?q=Santa+Barbara+Riviera,+Santa+Barbara,+CA&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <div class="location__info">
+                <h3>Enchanted Castle Estate</h3>
+                <p>1260 Channel Drive<br />Santa Barbara, CA 93108</p>
+                <p>
+                    Nestled in the hills of the Santa Barbara Riviera, our venue offers
+                    sweeping views of the coastline and lush, storybook gardens.
+                </p>
+                <p><strong>Parking:</strong> Complimentary valet available on-site.</p>
+                <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Santa+Barbara+Riviera+Santa+Barbara+CA"
+                    class="btn btn--dark"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section rsvp" id="rsvp">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">We can't wait to celebrate with you</p>
+            <h2 class="section__title">RSVP</h2>
+            <p class="rsvp__deadline">Kindly respond by August 1, 2026</p>
+        </div>
+
+        <form class="rsvp__form reveal" id="rsvpForm" novalidate>
+            <div class="form__row">
+                <div class="form__group">
+                    <label for="name">Full Name <span>*</span></label>
+                    <input type="text" id="name" name="name" required autocomplete="name" />
+                </div>
+                <div class="form__group">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email" />
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__group">
+                    <label for="attending">Will you attend? <span>*</span></label>
+                    <select id="attending" name="attending" required>
+                        <option value="" disabled selected>Please choose…</option>
+                        <option value="Joyfully accepts">Joyfully accepts</option>
+                        <option value="Regretfully declines">Regretfully declines</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form__group">
+                <label for="meal">Meal Preference</label>
+                <select id="meal" name="meal">
+                    <option value="No preference" selected>No preference</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Vegan">Vegan</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="message">A note for the couple</label>
+                <textarea id="message" name="message" rows="4" placeholder="Share your wishes or dietary notes…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--dark btn--full" id="rsvpSubmit">
+                Send RSVP
+            </button>
+
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__names">Jude &amp; Nicaela</p>
+        <p class="footer__date">09 · 12 · 2026 — Santa Barbara, California</p>
+        <p class="footer__note">And they lived happily ever after. We can't wait to see you there.</p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
