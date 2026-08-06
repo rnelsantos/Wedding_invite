@@ -1,4 +1,4 @@
-# Jude &amp; Nicaela — A Fairytale Wedding Invitation
+# — A Fairytale Wedding Invitation
 
 A single-page, fully responsive, fairytale-themed wedding invitation with three
 Google integrations:
