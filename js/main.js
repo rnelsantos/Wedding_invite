@@ -21,15 +21,86 @@
         }
     });
 
+    /* ---------------------------------------------------------
+     *  Section indicator: show current section name in the nav
+     * ------------------------------------------------------- */
+    var sectionLabel = document.getElementById("navSectionLabel");
+    var sectionMap = {
+        top: "",
+        story: "Our Story",
+        savethedate: "Save the Date",
+        prenup: "Prenup Gallery",
+        venue: "Venue",
+        attire: "Attire Guide",
+        program: "Program",
+        entourage: "Entourage",
+        reminders: "Reminders",
+        rsvp: "RSVP"
+    };
+    var sectionIds = Object.keys(sectionMap);
+    var allNavAnchors = navLinks ? navLinks.querySelectorAll("a[href^='#']") : [];
+
+    function updateSectionLabel() {
+        var current = "top";
+        var scrollPos = window.scrollY + window.innerHeight * 0.35;
+        for (var i = sectionIds.length - 1; i >= 0; i--) {
+            var el = document.getElementById(sectionIds[i]);
+            if (el && el.getBoundingClientRect().top + window.scrollY <= scrollPos) {
+                current = sectionIds[i];
+                break;
+            }
+        }
+        if (sectionLabel) {
+            var label = sectionMap[current] || "";
+            sectionLabel.textContent = label;
+            if (label) {
+                sectionLabel.classList.add("visible");
+            } else {
+                sectionLabel.classList.remove("visible");
+            }
+        }
+        // Highlight active nav link
+        allNavAnchors.forEach(function (a) {
+            if (a.getAttribute("href") === "#" + current) {
+                a.classList.add("active");
+            } else {
+                a.classList.remove("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", updateSectionLabel, { passive: true });
+    updateSectionLabel();
+
+    var navScrollY = 0;
+
+    function openNavMenu() {
+        navScrollY = window.scrollY;
+        document.body.style.top = (-navScrollY) + "px";
+        document.body.classList.add("nav-open");
+        navToggle.classList.add("open");
+        navLinks.classList.add("open");
+    }
+
+    function closeNavMenu() {
+        document.body.classList.remove("nav-open");
+        document.body.style.top = "";
+        window.scrollTo(0, navScrollY);
+        navToggle.classList.remove("open");
+        navLinks.classList.remove("open");
+    }
+
     if (navToggle) {
         navToggle.addEventListener("click", function () {
-            navToggle.classList.toggle("open");
-            navLinks.classList.toggle("open");
+            if (navLinks.classList.contains("open")) {
+                closeNavMenu();
+            } else {
+                openNavMenu();
+            }
         });
         navLinks.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
-                navToggle.classList.remove("open");
-                navLinks.classList.remove("open");
+                closeNavMenu();
             });
         });
     }
@@ -67,13 +138,14 @@
     var elHours = document.getElementById("cd-hours");
     var elMins = document.getElementById("cd-mins");
     var elSecs = document.getElementById("cd-secs");
+    var hasCountdown = elDays && elHours && elMins && elSecs;
 
     function pad(n) {
         return String(n).padStart(2, "0");
     }
 
     function tick() {
-        if (!target) return;
+        if (!target || !hasCountdown) return;
         var diff = target - Date.now();
         if (diff <= 0) {
             elDays.textContent = elHours.textContent = "00";
@@ -90,7 +162,7 @@
         elSecs.textContent = pad(secs);
     }
 
-    if (target) {
+    if (target && hasCountdown) {
         tick();
         setInterval(tick, 1000);
     }
@@ -114,10 +186,15 @@
     var videoPlaceholder = document.getElementById("videoPlaceholder");
     if (videoFrame && cfg.saveTheDateVideoUrl) {
         var iframeEl = document.createElement("iframe");
-        // Convert any YouTube URL format to embed and add enablejsapi for music sync
+        iframeEl.id = "ytPlayer";
+        // Convert any YouTube URL format to embed and add params required by the IFrame Player API
         var _vsrc = toYTEmbed(cfg.saveTheDateVideoUrl);
-        _vsrc = _vsrc.indexOf("?") === -1 ? _vsrc + "?enablejsapi=1" :
-                _vsrc.indexOf("enablejsapi") === -1 ? _vsrc + "&enablejsapi=1" : _vsrc;
+        var _isYouTube = _vsrc.indexOf("youtube.com/embed/") !== -1;
+        if (_isYouTube) {
+            var _origin = encodeURIComponent(window.location.origin);
+            _vsrc += (_vsrc.indexOf("?") === -1 ? "?" : "&") +
+                "enablejsapi=1&origin=" + _origin;
+        }
         iframeEl.src = _vsrc;
         iframeEl.title = "Save the Date video";
         iframeEl.allow =
@@ -125,6 +202,45 @@
         iframeEl.allowFullscreen = true;
         iframeEl.loading = "lazy";
         videoFrame.replaceChild(iframeEl, videoPlaceholder);
+
+        // Use the official YouTube IFrame Player API for a reliable play/pause
+        // signal — raw postMessage "infoDelivery" events never arrive unless the
+        // player has been initialized through the API, which is why the video
+        // previously didn't pause the background music.
+        if (_isYouTube) {
+            function bindYTPlayer() {
+                new window.YT.Player("ytPlayer", {
+                    events: {
+                        onStateChange: function (e) {
+                            if (e.data === window.YT.PlayerState.PLAYING) {
+                                if (window._wPause) window._wPause();
+                            } else if (
+                                e.data === window.YT.PlayerState.PAUSED ||
+                                e.data === window.YT.PlayerState.ENDED
+                            ) {
+                                if (window._wResume) window._wResume();
+                            }
+                        },
+                    },
+                });
+            }
+
+            if (window.YT && window.YT.Player) {
+                bindYTPlayer();
+            } else {
+                var _prevReady = window.onYouTubeIframeAPIReady;
+                window.onYouTubeIframeAPIReady = function () {
+                    if (typeof _prevReady === "function") _prevReady();
+                    bindYTPlayer();
+                };
+                if (!document.getElementById("ytIframeApi")) {
+                    var ytScript = document.createElement("script");
+                    ytScript.id = "ytIframeApi";
+                    ytScript.src = "https://www.youtube.com/iframe_api";
+                    document.head.appendChild(ytScript);
+                }
+            }
+        }
     }
 
     /* ---------------------------------------------------------
@@ -141,6 +257,7 @@
             action: "TEMPLATE",
             text: (cfg.coupleNames || "Our") + " Wedding",
             dates: toGCalDate(cfg.eventStart) + "/" + toGCalDate(cfg.eventEnd),
+            ctz: "Asia/Manila",
             details:
                 "We can't wait to celebrate with you! Join us for the wedding of " +
                 (cfg.coupleNames || "the happy couple") +
@@ -221,7 +338,7 @@
                 if (done) return;
                 done = true;
                 setStatus(
-                    "Thank you! Your RSVP has been received. 💛",
+                    "Thank you! Your RSVP has been received.",
                     "success"
                 );
                 form.reset();
@@ -348,20 +465,79 @@
 
     if (!bgMusic || !musicUrl) return;
 
+    // Playback position/state is kept in sessionStorage (works when the site
+    // is served over http/https) AND relayed through the URL of internal
+    // links (works even when opened directly from disk via file://, where
+    // each page can get an isolated/opaque storage origin). Whichever value
+    // is available at load time is used to pick up right where guests left off.
+    var STORE_TIME   = "nj_music_time";
+    var STORE_PAUSED = "nj_music_userPaused";
+    var INTERNAL_PAGES = ["index.html", "love-story.html", "entourage.html"];
+
+    function getStore(key, fallback) {
+        try {
+            var v = sessionStorage.getItem(key);
+            return v === null ? fallback : v;
+        } catch (e) { return fallback; }
+    }
+    function setStore(key, value) {
+        try { sessionStorage.setItem(key, value); } catch (e) {}
+    }
+
     bgMusic.src    = musicUrl;
-    bgMusic.volume = 0.4;
+    bgMusic.volume = 0.2;
     if (musicBtn) musicBtn.removeAttribute("hidden");
 
-    var playing    = false;
-    var userPaused = false;
+    var playing             = false;
+    var userPaused          = getStore(STORE_PAUSED, "0") === "1";
+    var resumeTime          = parseFloat(getStore(STORE_TIME, "0")) || 0;
+    var timeRestored        = false;
+    var cameFromInternalNav = false;
+
+    // A navigation link (see below) can pass fresher state via ?bgt=&bgp=
+    // query params — prefer those over whatever is in storage, then strip
+    // them from the visible URL. Arriving with these params also proves the
+    // guest came from an already-unlocked/playing page on this site, which
+    // matters when sessionStorage isn't shared across pages (e.g. some
+    // browsers isolate storage per file:// document).
+    (function readStateFromUrl() {
+        var params;
+        try { params = new URLSearchParams(location.search); } catch (e) { return; }
+        if (!params.has("bgt") && !params.has("bgp")) return;
+
+        cameFromInternalNav = true;
+        if (params.has("bgt")) {
+            var qt = parseFloat(params.get("bgt"));
+            if (!isNaN(qt) && qt >= 0) resumeTime = qt;
+        }
+        if (params.has("bgp")) userPaused = params.get("bgp") !== "1";
+
+        params.delete("bgt");
+        params.delete("bgp");
+        var qs = params.toString();
+        var cleanUrl = location.pathname + (qs ? "?" + qs : "") + location.hash;
+        try { history.replaceState(null, "", cleanUrl); } catch (e) {}
+    })();
+
+    function restoreTime() {
+        if (timeRestored) return;
+        timeRestored = true;
+        if (resumeTime > 0) {
+            try { bgMusic.currentTime = resumeTime; } catch (e) {}
+        }
+    }
+    bgMusic.addEventListener("loadedmetadata", restoreTime);
 
     function updateBtn() {
         if (!musicIcon) return;
-        musicIcon.innerHTML = playing ? "&#9646;&#9646;" : "&#127925;";
+        musicIcon.innerHTML = playing
+            ? '<svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-pause"></use></svg>'
+            : '<svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-music"></use></svg>';
         if (musicBtn) musicBtn.setAttribute("aria-label", playing ? "Pause music" : "Play music");
     }
 
     function doPlay() {
+        restoreTime();
         var p = bgMusic.play();
         if (p) p.then(function () { playing = true; updateBtn(); }).catch(function () {});
     }
@@ -369,9 +545,40 @@
     function doPause(bySystem) {
         if (!bgMusic.paused) bgMusic.pause();
         playing = false;
-        if (!bySystem) userPaused = true;
+        if (!bySystem) {
+            userPaused = true;
+            setStore(STORE_PAUSED, "1");
+        }
         updateBtn();
     }
+
+    // Persist playback position continuously so the next page can resume
+    // from the same spot instead of restarting the track.
+    bgMusic.addEventListener("timeupdate", function () {
+        setStore(STORE_TIME, String(bgMusic.currentTime));
+    });
+    window.addEventListener("pagehide", function () {
+        setStore(STORE_TIME, String(bgMusic.currentTime));
+    });
+
+    // Stamp any link to one of our own pages with the current playback
+    // position/state right before the browser navigates, so the next page
+    // can pick it up from the URL even if storage isn't shared (e.g. file://).
+    document.addEventListener("click", function (e) {
+        var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+        if (!a || (a.target && a.target !== "" && a.target !== "_self")) return;
+
+        var url;
+        try { url = new URL(a.getAttribute("href"), location.href); } catch (err) { return; }
+        if (url.origin !== location.origin) return;
+
+        var page = url.pathname.split("/").pop() || "index.html";
+        if (INTERNAL_PAGES.indexOf(page) === -1) return;
+
+        url.searchParams.set("bgt", bgMusic.currentTime.toFixed(2));
+        url.searchParams.set("bgp", (playing && !userPaused) ? "1" : "0");
+        a.href = url.toString();
+    }, true);
 
     // Expose for video sync
     window._wPause  = function () { doPause(true); };
@@ -379,34 +586,27 @@
 
     if (musicBtn) {
         musicBtn.addEventListener("click", function () {
-            if (playing) { doPause(false); } else { userPaused = false; doPlay(); }
+            if (playing) {
+                doPause(false);
+            } else {
+                userPaused = false;
+                setStore(STORE_PAUSED, "0");
+                doPlay();
+            }
         });
     }
 
     // Start after password unlock (user interaction = autoplay allowed)
-    window.addEventListener("siteUnlocked", doPlay);
-
-    // If no password / already unlocked, start after a short delay
-    var alreadyUnlocked = false;
-    try { alreadyUnlocked = sessionStorage.getItem("nj_unlocked") === ("ok:" + (cfg.sitePassword || "")); } catch (e) {};
-    if (!(cfg.sitePassword || "") || alreadyUnlocked) setTimeout(doPlay, 300);
-})();
-
-/* ================================================================
- *  VIDEO \u2194 MUSIC SYNC  (YouTube postMessage)
- * ================================================================ */
-(function () {
-    window.addEventListener("message", function (event) {
-        try {
-            if (typeof event.data !== "string") return;
-            var d = JSON.parse(event.data);
-            if (d.event === "infoDelivery" && d.info && typeof d.info.playerState !== "undefined") {
-                if (d.info.playerState === 1) {
-                    if (window._wPause)  window._wPause();   // video playing  \u2192 mute bg
-                } else if (d.info.playerState === 2 || d.info.playerState === 0) {
-                    if (window._wResume) window._wResume();  // video paused/ended \u2192 resume bg
-                }
-            }
-        } catch (e) {}
+    window.addEventListener("siteUnlocked", function () {
+        if (!userPaused) doPlay();
     });
+
+    // If no password / already unlocked — including guests navigating from an
+    // already-unlocked page (either detected via sessionStorage, or proven by
+    // arriving through one of our own tagged links) — resume automatically so
+    // the music carries over from page to page instead of stopping.
+    var alreadyUnlocked = false;
+    try { alreadyUnlocked = sessionStorage.getItem("nj_unlocked") === ("ok:" + (cfg.sitePassword || "")); } catch (e) {}
+    if ((!(cfg.sitePassword || "") || alreadyUnlocked || cameFromInternalNav) && !userPaused) setTimeout(doPlay, 300);
 })();
+

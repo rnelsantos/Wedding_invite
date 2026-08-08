@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The full love story of Jude &amp; Nica &#8212; getting married January 23, 2027, Tagaytay City, Cavite, Philippines." />
+    <title>Our Love Story &#8212; Jude &amp; Nica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- BACKGROUND MUSIC (source set via js/config.js → bgMusicUrl) -->
+<audio id="bgMusic" loop preload="none" aria-hidden="true"></audio>
+
+<!-- MUSIC TOGGLE BUTTON (shown only when bgMusicUrl is set) -->
+<button class="music-btn" id="musicBtn" aria-label="Play background music" title="Toggle music" hidden>
+    <span id="musicIcon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-music"></use></svg></span>
+</button>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+    <a href="index.html#top" class="nav__brand">
+        <img src="wedding_logo_transparent.png" alt="Jude &amp; Nica" class="nav__logo-img">
+    </a>
+    <span class="nav__section-label" id="navSectionLabel" aria-live="polite"></span>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#savethedate">Save the Date</a></li>
+        <li><a href="index.html#prenup">Prenup</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#attire">Attire</a></li>
+        <li><a href="index.html#program">Program</a></li>
+        <li><a href="index.html#entourage">Entourage</a></li>
+        <li><a href="index.html#reminders">Reminders</a></li>
+        <li><a href="index.html#rsvp">RSVP</a></li>
+    </ul>
+</nav>
+
+<!-- SUBPAGE HERO -->
+<header class="subpage-hero">
+    <div class="subpage-hero__content reveal">
+        <p class="subpage-hero__eyebrow">Jude &amp; Nica</p>
+        <h1 class="subpage-hero__title">Our Love Story</h1>
+        <a href="index.html" class="btn btn--light">&larr; Back to Invitation</a>
+    </div>
+    <div class="hero__floral" aria-hidden="true">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,80 L0,40 Q150,0 300,40 Q450,80 600,40 Q750,0 900,40 Q1050,80 1200,40 L1200,80 Z" fill="#fef9fb"/>
+        </svg>
+    </div>
+</header>
+
+<!-- OUR LOVE STORY -->
+<section class="section story">
+    <div class="story__timeline">
+
+        <!-- Chapter 1: 4 photos -->
+        <div class="story__chapter reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--1">Chapter 1</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-hearts"></use></svg> The Crush</h3>
+                <p>It all started in Jude&#8217;s final year of college at PUP. Nica was on a mission &#8212; running a campaign in his section as she vied for president of the PUP ECE student organization. Jude watched her speak with passion and conviction, and just like that, his heart was already a little bit hers.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 2: 4 photos -->
+        <div class="story__chapter story__chapter--reverse reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--2">Chapter 2</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-confetti"></use></svg> Finally Official</h3>
+                <p>What started as a quiet admiration blossomed into something beautiful. The moment they became official was nothing short of magical &#8212; two people choosing each other and saying yes to the adventure ahead.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 3: 4 photos -->
+        <div class="story__chapter reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--3">Chapter 3</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-plane"></use></svg> Love Across the Miles</h3>
+                <p>Distance tried to come between them &#8212; but it never stood a chance. For almost a year, they kept their love alive through late-night calls, countdowns, and the promise of a future together. Philippines to Ireland, they proved that real love waits for no distance.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 4: 4 photos -->
+        <div class="story__chapter story__chapter--reverse reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--4">Chapter 4</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-cat"></use></svg> Together at Last &#8212; Ireland, 2023</h3>
+                <p>In 2023, the wait was finally over. Nica crossed the world to be with Jude in Ireland, and together they built a little home full of warmth, laughter, and three very spoiled fur babies who immediately took over the house &#8212; and their hearts.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 5: The Proposal — London — 2 photos -->
+        <div class="story__chapter reveal">
+            <div class="story__chapter-album story__chapter-album--no-scroll">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--5">Chapter 5</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-gem"></use></svg> The Proposal &#8212; London</h3>
+                <p>On their second anniversary, Jude whisked Nica away to the city of London &#8212; and amid the lights and love of the city, he got down on one knee. Through happy tears and a resounding &#8220;yes,&#8221; two hearts made it official: forever was finally on the horizon.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 6: Wanderlust — 12 photos -->
+        <div class="story__chapter story__chapter--reverse reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 5</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 6</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 7</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 8</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 9</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 10</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 11</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 12</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--6">Chapter 6</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-map"></use></svg> Wanderlust Together</h3>
+                <p>Two hearts, one passport at a time. From the rolling green hills of Ireland to breathtaking European cities, and back to the beautiful islands of the Philippines &#8212; Jude and Nica have turned exploring the world into one of their greatest love languages.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 7: 4 photos -->
+        <div class="story__chapter reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--7">Chapter 7</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-house"></use></svg> Building Our Future</h3>
+                <p>They dreamed it, they worked for it, and they made it happen &#8212; together. Their dream car is in the driveway, and they now have two places to call home: one in the heart of Ireland and one in the Philippines. Every milestone, every memory, built side by side.</p>
+            </div>
+        </div>
+
+        <!-- Chapter 8: Forever — 4 photos -->
+        <div class="story__chapter story__chapter--reverse reveal">
+            <div class="story__chapter-album">
+                <div class="story__album-track">
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
+                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
+                </div>
+            </div>
+            <div class="story__chapter-body">
+                <div class="story__chapter-tag story__chapter-tag--8">Chapter 8</div>
+                <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-ring"></use></svg> Forever Starts in 2027</h3>
+                <p>After years of growing, loving, and building a beautiful life together &#8212; they&#8217;re finally ready to make it official and legal. In 2027, Jude and Nica will say &#8220;I do&#8221; and begin the most exciting chapter yet: building a family of their very own.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SUBPAGE FOOTER -->
+<footer class="footer subpage-footer">
+    <a href="index.html" class="btn btn--light subpage-footer__back">&larr; Back to Invitation</a>
+    <p class="footer__names">Jude &amp; Nica</p>
+    <p class="footer__date">01 &middot; 23 &middot; 2027 &mdash; Tagaytay City, Cavite, Philippines</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

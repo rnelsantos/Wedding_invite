@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meet the entourage of Jude &amp; Nica &#8212; getting married January 23, 2027, Tagaytay City, Cavite, Philippines." />
+    <title>Our Entourage &#8212; Jude &amp; Nica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- BACKGROUND MUSIC (source set via js/config.js → bgMusicUrl) -->
+<audio id="bgMusic" loop preload="none" aria-hidden="true"></audio>
+
+<!-- MUSIC TOGGLE BUTTON (shown only when bgMusicUrl is set) -->
+<button class="music-btn" id="musicBtn" aria-label="Play background music" title="Toggle music" hidden>
+    <span id="musicIcon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-music"></use></svg></span>
+</button>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+    <a href="index.html#top" class="nav__brand">
+        <img src="wedding_logo_transparent.png" alt="Jude &amp; Nica" class="nav__logo-img">
+    </a>
+    <span class="nav__section-label" id="navSectionLabel" aria-live="polite"></span>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#savethedate">Save the Date</a></li>
+        <li><a href="index.html#prenup">Prenup</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#attire">Attire</a></li>
+        <li><a href="index.html#program">Program</a></li>
+        <li><a href="index.html#entourage">Entourage</a></li>
+        <li><a href="index.html#reminders">Reminders</a></li>
+        <li><a href="index.html#rsvp">RSVP</a></li>
+    </ul>
+</nav>
+
+<!-- SUBPAGE HERO -->
+<header class="subpage-hero">
+    <div class="subpage-hero__content reveal">
+        <p class="subpage-hero__eyebrow">Jude &amp; Nica</p>
+        <h1 class="subpage-hero__title">Our Entourage</h1>
+        <a href="index.html" class="btn btn--light">&larr; Back to Invitation</a>
+    </div>
+    <div class="hero__floral" aria-hidden="true">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,80 L0,40 Q150,0 300,40 Q450,80 600,40 Q750,0 900,40 Q1050,80 1200,40 L1200,80 Z" fill="#fef9fb"/>
+        </svg>
+    </div>
+</header>
+
+<!-- ENTOURAGE -->
+<section class="section entourage">
+    <div class="section__head reveal">
+        <p class="section__sub">The wonderful people who will stand beside us on our big day</p>
+    </div>
+    <div class="entourage__grid">
+
+        <!-- Parents (wide, pink) -->
+        <div class="entourage__group entourage__group--wide entourage__group--pink reveal">
+            <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-family"></use></svg></div>
+            <h3 class="entourage__group-title">Parents</h3>
+            <div class="entourage__two-col">
+                <div>
+                    <p class="entourage__sublabel">Parents of the Bride</p>
+                    <p>[Father of the Bride]</p>
+                    <p>[Mother of the Bride]</p>
+                    <div class="entourage__subgroup">
+                        <p class="entourage__sublabel">Step Parents of the Bride</p>
+                        <p>[Step Father of the Bride]</p>
+                        <p>[Step Mother of the Bride]</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="entourage__sublabel">Parents of the Groom</p>
+                    <p>[Father of the Groom]</p>
+                    <p>[Mother of the Groom]</p>
+                    <div class="entourage__subgroup">
+                        <p class="entourage__sublabel">Grandfather of the Groom</p>
+                        <p>[Grandfather of the Groom]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Principal Sponsors (wide, gold, 7 each) -->
+        <div class="entourage__group entourage__group--wide entourage__group--gold reveal">
+            <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-star"></use></svg></div>
+            <h3 class="entourage__group-title">Principal Sponsors</h3>
+            <div class="entourage__two-col">
+                <div>
+                    <p class="entourage__sublabel">Ninong</p>
+                    <p>[Ninong Name 1]</p>
+                    <p>[Ninong Name 2]</p>
+                    <p>[Ninong Name 3]</p>
+                    <p>[Ninong Name 4]</p>
+                    <p>[Ninong Name 5]</p>
+                    <p>[Ninong Name 6]</p>
+                    <p>[Ninong Name 7]</p>
+                </div>
+                <div>
+                    <p class="entourage__sublabel">Ninang</p>
+                    <p>[Ninang Name 1]</p>
+                    <p>[Ninang Name 2]</p>
+                    <p>[Ninang Name 3]</p>
+                    <p>[Ninang Name 4]</p>
+                    <p>[Ninang Name 5]</p>
+                    <p>[Ninang Name 6]</p>
+                    <p>[Ninang Name 7]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maid of Honor + Best Man — centered -->
+        <div class="entourage__center-row">
+            <div class="entourage__group entourage__group--featured entourage__group--violet reveal">
+                <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-crown"></use></svg></div>
+                <h3 class="entourage__group-title">Maid of Honor</h3>
+                <p class="entourage__featured-name">[Maid of Honor Name]</p>
+            </div>
+            <div class="entourage__group entourage__group--featured entourage__group--violet reveal">
+                <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-bowtie"></use></svg></div>
+                <h3 class="entourage__group-title">Best Man</h3>
+                <p class="entourage__featured-name">[Best Man Name]</p>
+            </div>
+        </div>
+
+        <!-- Secondary Sponsors — icons above each heading (wide, blue) -->
+        <div class="entourage__group entourage__group--wide entourage__group--blue reveal">
+            <div class="entourage__three-col entourage__three-col--icons">
+                <div>
+                    <div class="entourage__sponsor-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-heart"></use></svg></div>
+                    <p class="entourage__sublabel">Veil</p>
+                    <p>[Name]</p>
+                    <p>[Name]</p>
+                </div>
+                <div>
+                    <div class="entourage__sponsor-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-candle"></use></svg></div>
+                    <p class="entourage__sublabel">Candle</p>
+                    <p>[Name]</p>
+                    <p>[Name]</p>
+                </div>
+                <div>
+                    <div class="entourage__sponsor-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-bow"></use></svg></div>
+                    <p class="entourage__sublabel">Cord</p>
+                    <p>[Name]</p>
+                    <p>[Name]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bridesmaids + Groomsmen — centered (7 each) -->
+        <div class="entourage__center-row">
+            <div class="entourage__group entourage__group--green reveal">
+                <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-bouquet"></use></svg></div>
+                <h3 class="entourage__group-title">Bridesmaids</h3>
+                <p>[Bridesmaid 1]</p>
+                <p>[Bridesmaid 2]</p>
+                <p>[Bridesmaid 3]</p>
+                <p>[Bridesmaid 4]</p>
+                <p>[Bridesmaid 5]</p>
+                <p>[Bridesmaid 6]</p>
+                <p>[Bridesmaid 7]</p>
+            </div>
+            <div class="entourage__group entourage__group--green reveal">
+                <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-tophat"></use></svg></div>
+                <h3 class="entourage__group-title">Groomsmen</h3>
+                <p>[Groomsman 1]</p>
+                <p>[Groomsman 2]</p>
+                <p>[Groomsman 3]</p>
+                <p>[Groomsman 4]</p>
+                <p>[Groomsman 5]</p>
+                <p>[Groomsman 6]</p>
+                <p>[Groomsman 7]</p>
+            </div>
+        </div>
+
+        <!-- Bearers (wide, with individual emojis, no section title) -->
+        <div class="entourage__group entourage__group--wide entourage__group--orange reveal">
+            <div class="entourage__three-col">
+                <div class="entourage__bearer">
+                    <div class="entourage__bearer-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-ring"></use></svg></div>
+                    <p class="entourage__sublabel">Ring Bearer</p>
+                    <p>[Name]</p>
+                </div>
+                <div class="entourage__bearer">
+                    <div class="entourage__bearer-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-coin"></use></svg></div>
+                    <p class="entourage__sublabel">Coin Bearer</p>
+                    <p>[Name]</p>
+                </div>
+                <div class="entourage__bearer">
+                    <div class="entourage__bearer-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-book"></use></svg></div>
+                    <p class="entourage__sublabel">Bible Bearer</p>
+                    <p>[Name]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Bearer + Flower Ladies — same alignment, centered -->
+        <div class="entourage__center-row">
+            <div class="entourage__group entourage__group--orange reveal">
+                <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-flag"></use></svg></div>
+                <h3 class="entourage__group-title">Banner Bearer</h3>
+                <p>[Name 1]</p>
+                <p>[Name 2]</p>
+            </div>
+            <div class="entourage__group entourage__group--pink reveal">
+                <div class="entourage__group-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-blossom"></use></svg></div>
+                <h3 class="entourage__group-title">Flower Ladies</h3>
+                <p>[Flower Lady Name 1]</p>
+                <p>[Flower Lady Name 2]</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SUBPAGE FOOTER -->
+<footer class="footer subpage-footer">
+    <a href="index.html" class="btn btn--light subpage-footer__back">&larr; Back to Invitation</a>
+    <p class="footer__names">Jude &amp; Nica</p>
+    <p class="footer__date">01 &middot; 23 &middot; 2027 &mdash; Tagaytay City, Cavite, Philippines</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

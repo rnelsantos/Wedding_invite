@@ -28,7 +28,7 @@
                 autocomplete="off"
                 required
             />
-            <button type="submit" class="btn btn--light pw-gate__btn">Enter &#10024;</button>
+            <button type="submit" class="btn btn--light pw-gate__btn">Enter <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg></button>
         </form>
         <p class="pw-gate__error" id="pwError" role="alert" aria-live="polite"></p>
     </div>
@@ -39,7 +39,7 @@
 
 <!-- MUSIC TOGGLE BUTTON (shown only when bgMusicUrl is set) -->
 <button class="music-btn" id="musicBtn" aria-label="Play background music" title="Toggle music" hidden>
-    <span id="musicIcon">&#127925;</span>
+    <span id="musicIcon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-music"></use></svg></span>
 </button>
 
 <!-- NAVIGATION -->
@@ -47,6 +47,7 @@
     <a href="#top" class="nav__brand">
         <img src="wedding_logo_transparent.png" alt="Jude &amp; Nica" class="nav__logo-img">
     </a>
+    <span class="nav__section-label" id="navSectionLabel" aria-live="polite"></span>
     <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
     </button>
@@ -75,14 +76,14 @@
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-        <p class="hero__eyebrow">&#10024; You are invited! &#10024;</p>
+        <p class="hero__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg> You are invited! <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg></p>
         <h1 class="hero__names">Jude <span>&amp;</span> Nica</h1>
         <p class="hero__tagline">is getting married</p>
         <div class="hero__date">
             <span class="hero__date-main">January 23, 2027</span>
             <span>Tagaytay City, Cavite, Philippines</span>
         </div>
-        <a href="#rsvp" class="btn btn--light">RSVP Now &#128140;</a>
+        <a href="#rsvp" class="btn btn--light">RSVP Now <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg></a>
     </div>
     <div class="hero__floral" aria-hidden="true">
         <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +94,7 @@
 
 <!-- COUNTDOWN -->
 <section class="countdown" aria-label="Countdown to the wedding">
-    <p class="countdown__label">Counting down till we say &#8220;I do&#8221; &#10024;</p>
+    <p class="countdown__label">Counting down till we say &#8220;I do&#8221; <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg></p>
     <div class="countdown__items">
         <div class="countdown__item"><span id="cd-days">00</span><small>Days</small></div>
         <div class="countdown__item"><span id="cd-hours">00</span><small>Hours</small></div>
@@ -102,154 +103,38 @@
     </div>
 </section>
 
-<!-- OUR LOVE STORY -->
-<section class="section story" id="story">
+<!-- OUR LOVE STORY (teaser) -->
+<section class="section story-teaser" id="story">
     <div class="section__head reveal">
-        <p class="section__eyebrow">How it all began &#128149;</p>
+        <p class="section__eyebrow">How it all began <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-hearts"></use></svg></p>
         <h2 class="section__title">Our Love Story</h2>
+        <p class="section__sub">Every love story is beautiful, but ours is our favorite</p>
     </div>
-    <div class="story__timeline">
-
-        <!-- Chapter 1: 4 photos -->
-        <div class="story__chapter reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--1">Chapter 1</div>
-                <h3>&#128149; The Crush</h3>
-                <p>It all started in Jude&#8217;s final year of college at PUP. Nica was on a mission &#8212; running a campaign in his section as she vied for president of the PUP ECE student organization. Jude watched her speak with passion and conviction, and just like that, his heart was already a little bit hers.</p>
-            </div>
+    <div class="story-teaser__couple reveal">
+        <div class="story-teaser__person">
+            <div class="img-placeholder img-placeholder--photo"><span>&#128248;</span><p>Photo of the Groom</p></div>
+            <p class="story-teaser__name">Jude Aeddrian M. Atienza</p>
         </div>
-
-        <!-- Chapter 2: 4 photos -->
-        <div class="story__chapter story__chapter--reverse reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--2">Chapter 2</div>
-                <h3>&#127881; Finally Official</h3>
-                <p>What started as a quiet admiration blossomed into something beautiful. The moment they became official was nothing short of magical &#8212; two people choosing each other and saying yes to the adventure ahead.</p>
-            </div>
+        <div class="story-teaser__person">
+            <div class="img-placeholder img-placeholder--photo"><span>&#128248;</span><p>Photo of the Bride</p></div>
+            <p class="story-teaser__name">Nicaela D. Maulanin</p>
         </div>
-
-        <!-- Chapter 3: 4 photos -->
-        <div class="story__chapter reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--3">Chapter 3</div>
-                <h3>&#9992;&#65039; Love Across the Miles</h3>
-                <p>Distance tried to come between them &#8212; but it never stood a chance. For almost a year, they kept their love alive through late-night calls, countdowns, and the promise of a future together. Philippines to Ireland, they proved that real love waits for no distance.</p>
-            </div>
-        </div>
-
-        <!-- Chapter 4: 4 photos -->
-        <div class="story__chapter story__chapter--reverse reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--4">Chapter 4</div>
-                <h3>&#128049; Together at Last &#8212; Ireland, 2023</h3>
-                <p>In 2023, the wait was finally over. Nica crossed the world to be with Jude in Ireland, and together they built a little home full of warmth, laughter, and three very spoiled fur babies who immediately took over the house &#8212; and their hearts.</p>
-            </div>
-        </div>
-
-        <!-- Chapter 5: Wanderlust — 12 photos -->
-        <div class="story__chapter reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 5</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 6</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 7</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 8</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 9</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 10</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 11</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 12</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--5">Chapter 5</div>
-                <h3>&#128506;&#65039; Wanderlust Together</h3>
-                <p>Two hearts, one passport at a time. From the rolling green hills of Ireland to breathtaking European cities, and back to the beautiful islands of the Philippines &#8212; Jude and Nica have turned exploring the world into one of their greatest love languages.</p>
-            </div>
-        </div>
-
-        <!-- Chapter 6: 4 photos -->
-        <div class="story__chapter story__chapter--reverse reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--6">Chapter 6</div>
-                <h3>&#127968; Building Our Future</h3>
-                <p>They dreamed it, they worked for it, and they made it happen &#8212; together. Their dream car is in the driveway, and they now have two places to call home: one in the heart of Ireland and one in the Philippines. Every milestone, every memory, built side by side.</p>
-            </div>
-        </div>
-
-        <!-- Chapter 7: Forever — 4 photos -->
-        <div class="story__chapter reveal">
-            <div class="story__chapter-album">
-                <div class="story__album-track">
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 1</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 2</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 3</p></div></div>
-                    <div class="story__album-photo"><div class="img-placeholder img-placeholder--mini"><span>&#128248;</span><p>Photo 4</p></div></div>
-                </div>
-            </div>
-            <div class="story__chapter-body">
-                <div class="story__chapter-tag story__chapter-tag--7">Chapter 7</div>
-                <h3>&#128141; Forever Starts in 2027</h3>
-                <p>After years of growing, loving, and building a beautiful life together &#8212; they&#8217;re finally ready to make it official and legal. In 2027, Jude and Nica will say &#8220;I do&#8221; and begin the most exciting chapter yet: building a family of their very own.</p>
-            </div>
-        </div>
-
+    </div>
+    <div class="story-teaser__cta reveal">
+        <a href="love-story.html" class="btn btn--dark">Read Our Full Love Story <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg></a>
     </div>
 </section>
 
 <!-- SAVE THE DATE -->
 <section class="section savethedate" id="savethedate">
     <div class="section__head reveal">
-        <p class="section__eyebrow">&#10024; Mark your calendars &#10024;</p>
+        <p class="section__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg> Mark your calendars <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg></p>
         <h2 class="section__title">Save the Date</h2>
     </div>
     <div class="savethedate__video-wrap reveal">
         <div class="savethedate__frame" id="videoFrame">
             <div class="savethedate__placeholder" id="videoPlaceholder">
-                <div class="savethedate__play">&#9654;</div>
+                <div class="savethedate__play"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-play"></use></svg></div>
                 <p>Our Save-the-Date video is coming soon&hellip;</p>
                 <span>Check back here for the next chapter!</span>
             </div>
@@ -260,11 +145,12 @@
             <span class="savethedate__month">January</span>
             <span class="savethedate__day">23</span>
             <span class="savethedate__year">2027</span>
+            <span class="savethedate__weekday">Saturday</span>
         </div>
         <div class="savethedate__info">
             <p class="savethedate__couple">Jude &amp; Nica</p>
             <p>Tagaytay City, Cavite, Philippines</p>
-            <a href="#" id="addToCalendar" class="btn btn--dark" target="_blank" rel="noopener">&#128197; Add to Google Calendar</a>
+            <a href="#" id="addToCalendar" class="btn btn--dark" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-calendar"></use></svg> Add to Google Calendar</a>
         </div>
     </div>
 </section>
@@ -272,7 +158,7 @@
 <!-- PRENUP GALLERY -->
 <section class="section prenup" id="prenup">
     <div class="section__head reveal">
-        <p class="section__eyebrow">Before the big day &#127800;</p>
+        <p class="section__eyebrow">Before the big day <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-blossom"></use></svg></p>
         <h2 class="section__title">Prenup Gallery</h2>
         <p class="section__sub">Swipe or scroll to see our full album &rarr;</p>
     </div>
@@ -299,7 +185,7 @@
 <!-- VENUE -->
 <section class="section venue" id="venue">
     <div class="section__head reveal">
-        <p class="section__eyebrow">Come celebrate with us &#127807;</p>
+        <p class="section__eyebrow">Come celebrate with us <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-leaf"></use></svg></p>
         <h2 class="section__title">The Venues</h2>
         <p class="venue__location-note">Both venues are in the same Tagaytay area &middot; <strong>Free shuttle</strong> between ceremony &amp; reception</p>
     </div>
@@ -313,9 +199,9 @@
             <div class="venue__body">
                 <div class="venue__badge venue__badge--ceremony">Ceremony</div>
                 <h3>San Antonio de Padua Chapel</h3>
-                <p class="venue__time">&#128336; 3:00 PM</p>
+                <p class="venue__time"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-clock"></use></svg> 3:00 PM</p>
                 <p>Tagaytay City, Cavite, Philippines</p>
-                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=San+Antonio+de+Padua+Parish+Tagaytay+Cavite" class="btn btn--dark" target="_blank" rel="noopener">&#128205; Get Directions</a>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=14.1345514,121.0172672" class="btn btn--dark" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-pin"></use></svg> Get Directions</a>
             </div>
         </div>
 
@@ -327,12 +213,11 @@
             <div class="venue__body">
                 <div class="venue__badge venue__badge--reception">Reception</div>
                 <h3>Alta D Tagaytay</h3>
-                <p class="venue__time">&#128338; 7:30 PM</p>
+                <p class="venue__time"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-clock"></use></svg> 7:30 PM</p>
                 <p>Tagaytay City, Cavite, Philippines</p>
                 <div class="venue__btns">
-                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Alta+D+Tagaytay" class="btn btn--dark" target="_blank" rel="noopener">&#128205; Get Directions</a>
-                    <!-- HOTEL ROOM RATES: Replace # with the actual booking link from Alta D Tagaytay -->
-                    <a href="#" class="btn btn--outline" id="hotelRoomLink" target="_blank" rel="noopener">&#127970; Discounted Room Rates</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Alta+D+Tagaytay" class="btn btn--dark" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-pin"></use></svg> Get Directions</a>
+                    <a href="hotel-rates.html" class="btn btn--outline" id="hotelRoomLink"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-building"></use></svg> Discounted Room Rates</a>
                 </div>
             </div>
         </div>
@@ -344,7 +229,7 @@
 <!-- ATTIRE GUIDE -->
 <section class="section attire" id="attire">
     <div class="section__head reveal">
-        <p class="section__eyebrow">Dress to impress &#10024;</p>
+        <p class="section__eyebrow">Dress to impress <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg></p>
         <h2 class="section__title">Attire Guide</h2>
     </div>
     <div class="attire__wrap reveal">
@@ -359,8 +244,8 @@
         <div class="attire__body">
             <h3>Dress Code</h3>
             <p>We&#8217;d love for our guests to complement the elegance and whimsy of our special day. Our full attire guide with colour palette and style suggestions will be uploaded soon!</p>
-            <p class="attire__note">&#127941; Get a chance to be awarded as the <strong>Best Dressed Guest</strong> of the evening! Dress to impress and let your style shine.</p>
-            <p class="attire__note">&#10024; Think soft, romantic, and dreamy &#8212; pastel and semi-formal tones are warmly encouraged!</p>
+            <p class="attire__note"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-medal"></use></svg> Get a chance to be awarded as the <strong>Best Dressed Guest</strong> of the evening! Dress to impress and let your style shine.</p>
+            <p class="attire__note"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg> Think soft, romantic, and dreamy &#8212; pastel and semi-formal tones are warmly encouraged!</p>
         </div>
     </div>
 </section>
@@ -368,13 +253,13 @@
 <!-- PROGRAM SCHEDULE -->
 <section class="section program" id="program">
     <div class="section__head reveal">
-        <p class="section__eyebrow">The story of our day &#127775;</p>
+        <p class="section__eyebrow">The story of our day <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-star"></use></svg></p>
         <h2 class="section__title">Program Schedule</h2>
     </div>
     <div class="program__timeline">
 
         <div class="program__item reveal">
-            <div class="program__dot" aria-hidden="true">&#127800;</div>
+            <div class="program__dot" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-blossom"></use></svg></div>
             <div class="program__body">
                 <span class="program__time">2:30 PM</span>
                 <h3>Guests Arrive</h3>
@@ -383,7 +268,7 @@
         </div>
 
         <div class="program__item reveal">
-            <div class="program__dot" aria-hidden="true">&#128141;</div>
+            <div class="program__dot" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-ring"></use></svg></div>
             <div class="program__body">
                 <span class="program__time">3:00 PM</span>
                 <h3>Wedding Ceremony</h3>
@@ -392,7 +277,7 @@
         </div>
 
         <div class="program__item reveal">
-            <div class="program__dot" aria-hidden="true">&#127863;</div>
+            <div class="program__dot" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-wine"></use></svg></div>
             <div class="program__body">
                 <span class="program__time">4:30 PM</span>
                 <h3>Cocktail Hour</h3>
@@ -401,7 +286,7 @@
         </div>
 
         <div class="program__item reveal">
-            <div class="program__dot" aria-hidden="true">&#127881;</div>
+            <div class="program__dot" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-confetti"></use></svg></div>
             <div class="program__body">
                 <span class="program__time">7:30 PM</span>
                 <h3>Reception Program</h3>
@@ -410,7 +295,7 @@
         </div>
 
         <div class="program__item reveal">
-            <div class="program__dot" aria-hidden="true">&#127925;</div>
+            <div class="program__dot" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-music"></use></svg></div>
             <div class="program__body">
                 <span class="program__time">10:00 PM</span>
                 <h3>After Party</h3>
@@ -419,227 +304,74 @@
         </div>
 
         <div class="program__item reveal">
-            <div class="program__dot" aria-hidden="true">&#127769;</div>
+            <div class="program__dot" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-moon"></use></svg></div>
             <div class="program__body">
                 <span class="program__time">11:00 PM</span>
                 <h3>End of Celebration</h3>
-                <p>Thank you for being part of our magical night. Safe travels home &#8212; and thank you for the memories! &#127769;&#10024;</p>
+                <p>Thank you for being part of our magical night. Safe travels home &#8212; and thank you for the memories! <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-moon"></use></svg> <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-sparkle"></use></svg></p>
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- ENTOURAGE -->
-<section class="section entourage" id="entourage">
+<!-- ENTOURAGE (teaser) -->
+<section class="section entourage-teaser" id="entourage">
     <div class="section__head reveal">
-        <p class="section__eyebrow">Our beloved people &#128144;</p>
+        <p class="section__eyebrow">Our beloved people <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-bouquet"></use></svg></p>
         <h2 class="section__title">Our Entourage</h2>
         <p class="section__sub">The wonderful people who will stand beside us on our big day</p>
     </div>
-    <div class="entourage__grid">
-
-        <!-- Parents (wide, pink) -->
-        <div class="entourage__group entourage__group--wide entourage__group--pink reveal">
-            <div class="entourage__group-icon">&#128106;</div>
-            <h3 class="entourage__group-title">Parents</h3>
-            <div class="entourage__two-col">
-                <div>
-                    <p class="entourage__sublabel">Parents of the Bride</p>
-                    <p>[Father of the Bride]</p>
-                    <p>[Mother of the Bride]</p>
-                    <div class="entourage__subgroup">
-                        <p class="entourage__sublabel">Step Parents of the Bride</p>
-                        <p>[Step Father of the Bride]</p>
-                        <p>[Step Mother of the Bride]</p>
-                    </div>
-                </div>
-                <div>
-                    <p class="entourage__sublabel">Parents of the Groom</p>
-                    <p>[Father of the Groom]</p>
-                    <p>[Mother of the Groom]</p>
-                    <div class="entourage__subgroup">
-                        <p class="entourage__sublabel">Grandfather of the Groom</p>
-                        <p>[Grandfather of the Groom]</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Principal Sponsors (wide, gold, 7 each) -->
-        <div class="entourage__group entourage__group--wide entourage__group--gold reveal">
-            <div class="entourage__group-icon">&#11088;</div>
-            <h3 class="entourage__group-title">Principal Sponsors</h3>
-            <div class="entourage__two-col">
-                <div>
-                    <p class="entourage__sublabel">Ninong</p>
-                    <p>[Ninong Name 1]</p>
-                    <p>[Ninong Name 2]</p>
-                    <p>[Ninong Name 3]</p>
-                    <p>[Ninong Name 4]</p>
-                    <p>[Ninong Name 5]</p>
-                    <p>[Ninong Name 6]</p>
-                    <p>[Ninong Name 7]</p>
-                </div>
-                <div>
-                    <p class="entourage__sublabel">Ninang</p>
-                    <p>[Ninang Name 1]</p>
-                    <p>[Ninang Name 2]</p>
-                    <p>[Ninang Name 3]</p>
-                    <p>[Ninang Name 4]</p>
-                    <p>[Ninang Name 5]</p>
-                    <p>[Ninang Name 6]</p>
-                    <p>[Ninang Name 7]</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Maid of Honor + Best Man — centered -->
-        <div class="entourage__center-row">
-            <div class="entourage__group entourage__group--featured entourage__group--violet reveal">
-                <div class="entourage__group-icon">&#128081;</div>
-                <h3 class="entourage__group-title">Maid of Honor</h3>
-                <p class="entourage__featured-name">[Maid of Honor Name]</p>
-            </div>
-            <div class="entourage__group entourage__group--featured entourage__group--violet reveal">
-                <div class="entourage__group-icon">&#129333;</div>
-                <h3 class="entourage__group-title">Best Man</h3>
-                <p class="entourage__featured-name">[Best Man Name]</p>
-            </div>
-        </div>
-
-        <!-- Secondary Sponsors — icons above each heading (wide, blue) -->
-        <div class="entourage__group entourage__group--wide entourage__group--blue reveal">
-            <div class="entourage__three-col entourage__three-col--icons">
-                <div>
-                    <div class="entourage__sponsor-icon">&#129293;</div>
-                    <p class="entourage__sublabel">Veil</p>
-                    <p>[Name]</p>
-                    <p>[Name]</p>
-                </div>
-                <div>
-                    <div class="entourage__sponsor-icon">🕯️</div>
-                    <p class="entourage__sublabel">Candle</p>
-                    <p>[Name]</p>
-                    <p>[Name]</p>
-                </div>
-                <div>
-                    <div class="entourage__sponsor-icon">&#127872;</div>
-                    <p class="entourage__sublabel">Cord</p>
-                    <p>[Name]</p>
-                    <p>[Name]</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bridesmaids + Groomsmen — centered (7 each) -->
-        <div class="entourage__center-row">
-            <div class="entourage__group entourage__group--green reveal">
-                <div class="entourage__group-icon">&#128144;</div>
-                <h3 class="entourage__group-title">Bridesmaids</h3>
-                <p>[Bridesmaid 1]</p>
-                <p>[Bridesmaid 2]</p>
-                <p>[Bridesmaid 3]</p>
-                <p>[Bridesmaid 4]</p>
-                <p>[Bridesmaid 5]</p>
-                <p>[Bridesmaid 6]</p>
-                <p>[Bridesmaid 7]</p>
-            </div>
-            <div class="entourage__group entourage__group--green reveal">
-                <div class="entourage__group-icon">&#127913;</div>
-                <h3 class="entourage__group-title">Groomsmen</h3>
-                <p>[Groomsman 1]</p>
-                <p>[Groomsman 2]</p>
-                <p>[Groomsman 3]</p>
-                <p>[Groomsman 4]</p>
-                <p>[Groomsman 5]</p>
-                <p>[Groomsman 6]</p>
-                <p>[Groomsman 7]</p>
-            </div>
-        </div>
-
-        <!-- Bearers (wide, with individual emojis, no section title) -->
-        <div class="entourage__group entourage__group--wide entourage__group--orange reveal">
-            <div class="entourage__three-col">
-                <div class="entourage__bearer">
-                    <div class="entourage__bearer-icon">&#128141;</div>
-                    <p class="entourage__sublabel">Ring Bearer</p>
-                    <p>[Name]</p>
-                </div>
-                <div class="entourage__bearer">
-                    <div class="entourage__bearer-icon">&#129689;</div>
-                    <p class="entourage__sublabel">Coin Bearer</p>
-                    <p>[Name]</p>
-                </div>
-                <div class="entourage__bearer">
-                    <div class="entourage__bearer-icon">&#128214;</div>
-                    <p class="entourage__sublabel">Bible Bearer</p>
-                    <p>[Name]</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Banner Bearer + Flower Ladies — same alignment, centered -->
-        <div class="entourage__center-row">
-            <div class="entourage__group entourage__group--orange reveal">
-                <div class="entourage__group-icon">&#128681;</div>
-                <h3 class="entourage__group-title">Banner Bearer</h3>
-                <p>[Name 1]</p>
-                <p>[Name 2]</p>
-            </div>
-            <div class="entourage__group entourage__group--pink reveal">
-                <div class="entourage__group-icon">&#127800;</div>
-                <h3 class="entourage__group-title">Flower Ladies</h3>
-                <p>[Flower Lady Name 1]</p>
-                <p>[Flower Lady Name 2]</p>
-            </div>
-        </div>
-
+    <div class="entourage-teaser__photo reveal">
+        <img src="Pictures/Entourage_Main.png" alt="Our Entourage" class="entourage-teaser__img">
+    </div>
+    <div class="entourage-teaser__cta reveal">
+        <a href="entourage.html" class="btn btn--dark">Meet Our Entourage <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-bouquet"></use></svg></a>
     </div>
 </section>
 
 <!-- OUR LITTLE REMINDERS -->
 <section class="section reminders" id="reminders">
     <div class="section__head reveal">
-        <p class="section__eyebrow">A few little things to note &#128221;</p>
+        <p class="section__eyebrow">A few little things to note <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-note"></use></svg></p>
         <h2 class="section__title">Our Little Reminders</h2>
     </div>
     <div class="reminders__grid">
 
         <div class="reminders__card reminders__card--blue reveal">
-            <div class="reminders__icon">&#9200;</div>
+            <div class="reminders__icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-clock"></use></svg></div>
             <h3>Please Arrive on Time</h3>
             <p>Doors open at <strong>2:30 PM</strong>. The ceremony begins promptly at <strong>3:00 PM</strong>. We&#8217;d love to see all your smiling faces before we walk down the aisle!</p>
         </div>
 
         <div class="reminders__card reminders__card--yellow reveal">
-            <div class="reminders__icon">&#127873;</div>
+            <div class="reminders__icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-gift"></use></svg></div>
             <h3>Gift Guide</h3>
             <p>Your presence is truly the greatest gift! If you&#8217;d like to give something, we truly prefer a <strong>monetary gift</strong> &#8212; we can&#8217;t quite imagine how we&#8217;d bring physical gifts all the way from the Philippines back to Ireland! E-wallet transfers are warmly welcomed.</p>
         </div>
 
         <div class="reminders__card reminders__card--green reveal">
-            <div class="reminders__icon">&#128118;</div>
+            <div class="reminders__icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-baby"></use></svg></div>
             <h3>Adults-Only Celebration</h3>
             <p>We&#8217;ve curated an intimate adults-only celebration. We lovingly ask that little ones stay home so everyone can fully relax and enjoy the evening. We appreciate your understanding!</p>
         </div>
 
         <div class="reminders__card reminders__card--violet reveal">
-            <div class="reminders__icon">&#128244;</div>
+            <div class="reminders__icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-phone-off"></use></svg></div>
             <h3>Unplugged Ceremony</h3>
             <p>We kindly ask that you put away phones and cameras during the ceremony. Be fully present with us &#8212; our photographer will capture every beautiful moment so you can simply enjoy the magic.</p>
         </div>
 
         <div class="reminders__card reminders__card--orange reveal">
-            <div class="reminders__icon">&#128140;</div>
+            <div class="reminders__icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg></div>
             <h3>No Unannounced Plus Ones</h3>
             <p>Our guest list has been carefully prepared to ensure every guest has a seat. Please do not bring additional guests unless they are explicitly included in your formal invitation. Thank you!</p>
         </div>
 
         <div class="reminders__card reminders__card--pink reveal">
-            <div class="reminders__icon">&#129323;</div>
+            <div class="reminders__icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-lock"></use></svg></div>
             <h3>Keep Our Invitation Private</h3>
-            <p>We kindly ask that you keep our wedding invitation details private. Please refrain from making any surprise announcements or publicly sharing our wedding details without our knowledge. Let&#8217;s keep it intimate and special. &#128149;</p>
+            <p>We kindly ask that you keep our wedding invitation details private. Please refrain from making any surprise announcements or publicly sharing our wedding details without our knowledge. Let&#8217;s keep it intimate and special. <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-heart"></use></svg></p>
         </div>
 
     </div>
@@ -648,7 +380,7 @@
 <!-- RSVP -->
 <section class="section rsvp" id="rsvp">
     <div class="section__head reveal">
-        <p class="section__eyebrow">We can&#8217;t wait to celebrate with you &#127800;</p>
+        <p class="section__eyebrow">We can&#8217;t wait to celebrate with you <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-blossom"></use></svg></p>
         <h2 class="section__title">RSVP</h2>
         <p class="rsvp__deadline">Kindly respond by <strong>December 1, 2026</strong></p>
     </div>
@@ -671,16 +403,16 @@
             <label for="attending">Will you attend? <span aria-hidden="true">*</span></label>
             <select id="attending" name="attending" required>
                 <option value="" disabled selected>Please choose&hellip;</option>
-                <option value="Joyfully accepts">&#127881; Joyfully accepts</option>
-                <option value="Regretfully declines">&#128546; Regretfully declines</option>
+                <option value="Joyfully accepts">Joyfully accepts</option>
+                <option value="Regretfully declines">Regretfully declines</option>
             </select>
         </div>
         <div class="form__group">
-            <label for="message">A note for the couple &#128149;</label>
+            <label for="message">A note for the couple <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-hearts"></use></svg></label>
             <textarea id="message" name="message" rows="4" placeholder="Share your wishes and love for Jude &amp; Nica&hellip;"></textarea>
         </div>
-        <button type="submit" class="btn btn--dark btn--full" id="rsvpSubmit">Send RSVP &#128140;</button>
-        <p class="rsvp__note">&#9888;&#65039; Please note that failure to respond by the deadline will be considered as <strong>not attending</strong>, and your reserved seat will be offered to another guest. We appreciate your prompt response!</p>
+        <button type="submit" class="btn btn--dark btn--full" id="rsvpSubmit">Send RSVP <svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg></button>
+        <p class="rsvp__note"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-warning"></use></svg> Please note that failure to respond by the deadline will be considered as <strong>not attending</strong>, and your reserved seat will be offered to another guest. We appreciate your prompt response!</p>
         <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
 </section>
