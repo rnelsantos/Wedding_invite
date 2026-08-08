@@ -34,7 +34,7 @@ window.WEDDING_CONFIG = {
      *  Guests must enter this password to view the invitation.
      *  Set to "" to disable password protection.
      * ----------------------------------------------------- */
-    sitePassword: "Rainy_Atienza123", // e.g. "jude2027"
+    sitePassword: "Cats123", // e.g. "jude2027"
 
     /* -------------------------------------------------------
      *  BACKGROUND MUSIC
@@ -43,7 +43,7 @@ window.WEDDING_CONFIG = {
      *  e.g. "music/our-song.mp3"
      *  Set to "" to disable background music.
      * ----------------------------------------------------- */
-    bgMusicUrl: "music/Starship_-_Nothings_Gonna_Stop_Us_Now_Lyrics.mp3", // e.g. "music/our-song.mp3"
+    bgMusicUrl: "music/Be-Our-Guest.mp3", // e.g. "music/our-song.mp3"
 
     /* -------------------------------------------------------
      *  GOOGLE FORM (RSVP) INTEGRATION

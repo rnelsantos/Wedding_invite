@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discounted room rates and booking details at Alta D&#8217; Tagaytay Hotel for the wedding of Jude &amp; Nica &#8212; January 23, 2027." />
+    <title>Discounted Room Rates &#8212; Jude &amp; Nica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- BACKGROUND MUSIC (source set via js/config.js → bgMusicUrl) -->
+<audio id="bgMusic" loop preload="none" aria-hidden="true"></audio>
+
+<!-- MUSIC TOGGLE BUTTON (shown only when bgMusicUrl is set) -->
+<button class="music-btn" id="musicBtn" aria-label="Play background music" title="Toggle music" hidden>
+    <span id="musicIcon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-music"></use></svg></span>
+</button>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+    <a href="index.html#top" class="nav__brand">
+        <img src="wedding_logo_transparent.png" alt="Jude &amp; Nica" class="nav__logo-img">
+    </a>
+    <span class="nav__section-label" id="navSectionLabel" aria-live="polite"></span>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#savethedate">Save the Date</a></li>
+        <li><a href="index.html#prenup">Prenup</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#attire">Attire</a></li>
+        <li><a href="index.html#program">Program</a></li>
+        <li><a href="index.html#entourage">Entourage</a></li>
+        <li><a href="index.html#reminders">Reminders</a></li>
+        <li><a href="index.html#rsvp">RSVP</a></li>
+    </ul>
+</nav>
+
+<!-- SUBPAGE HERO -->
+<header class="subpage-hero">
+    <div class="subpage-hero__content reveal">
+        <p class="subpage-hero__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-building"></use></svg> Alta D&#8217; Tagaytay Hotel</p>
+        <h1 class="subpage-hero__title">Discounted Room Rates</h1>
+        <a href="index.html#venue" class="btn btn--light">&larr; Back to Invitation</a>
+    </div>
+    <div class="hero__floral" aria-hidden="true">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,80 L0,40 Q150,0 300,40 Q450,80 600,40 Q750,0 900,40 Q1050,80 1200,40 L1200,80 Z" fill="#fef9fb"/>
+        </svg>
+    </div>
+</header>
+
+<!-- DISCOUNT & PAYMENT TERMS -->
+<section class="section rates-terms" id="rates-terms">
+    <div class="section__head reveal">
+        <p class="section__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-note"></use></svg> Exclusively for our guests</p>
+        <h2 class="section__title">The Wedding Guest Discount &amp; Payment Terms</h2>
+        <p class="section__sub">Alta D&#8217; Tagaytay Hotel offers a special rate for our attendees &mdash; here&#8217;s how to claim it</p>
+    </div>
+    <ul class="rates-list reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-gem"></use></svg> <span>Guests receive an exclusive <strong>25% discount</strong> off the published room rates.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg> <span>To avail of this discount, guests must inform the reservation team that they are booking for our wedding and provide the <strong>couple&#8217;s surname</strong> and the <strong>wedding date</strong>.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-coin"></use></svg> <span>To secure the reservation, the hotel requires at least a <strong>50% deposit</strong> of the total payable amount.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-house"></use></svg> <span>The remaining balance can be paid on the <strong>day of check-in</strong>.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-warning"></use></svg> <span>Please note that the discount is <strong>not valid during blackout dates</strong>, and standard terms and conditions apply.</span></li>
+    </ul>
+</section>
+
+<!-- ROOM RATES TABLE -->
+<section class="section rates-table-section" id="rates-table">
+    <div class="section__head reveal">
+        <p class="section__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-coin"></use></svg> Rates per night</p>
+        <h2 class="section__title">Discounted Room Rates</h2>
+        <p class="section__sub">A simplified breakdown of the room types and their discounted prices per night</p>
+    </div>
+    <div class="rates-table__wrap reveal">
+        <table class="rates-table">
+            <thead>
+                <tr>
+                    <th>Room Type</th>
+                    <th>Discounted Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Standard Room</td><td>Php 4,500.00 nett</td></tr>
+                <tr><td>Superior Room 1 &amp; 2</td><td>Php 4,875.00 nett</td></tr>
+                <tr><td>Ridge Room</td><td>Php 5,625.00 nett</td></tr>
+                <tr><td>Lake Room</td><td>Php 6,000.00 nett</td></tr>
+                <tr><td>Attic Room</td><td>Php 6,375.00 nett</td></tr>
+                <tr><td>Ridge View Room</td><td>Php 6,750.00 nett</td></tr>
+                <tr><td>Alta Deluxe / Corner Deluxe</td><td>Php 9,000.00 nett</td></tr>
+                <tr><td>Lakeview Room</td><td>Php 9,750.00 nett</td></tr>
+                <tr><td>Junior Suite</td><td>Php 12,000.00 nett</td></tr>
+                <tr><td>Tower Suite</td><td>Php 18,750.00 nett</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ROOM INCLUSIONS & EXTRA GUEST FEES -->
+<section class="section rates-inclusions" id="rates-inclusions">
+    <div class="section__head reveal">
+        <p class="section__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-house"></use></svg> Good to know</p>
+        <h2 class="section__title">Room Inclusions &amp; Extra Guest Fees</h2>
+        <p class="section__sub">It&#8217;s helpful to know exactly what you&#8217;re paying for, especially if you&#8217;re bringing families or groups</p>
+    </div>
+    <ul class="rates-list reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-gift"></use></svg> <span>Each room accommodation comes with <strong>breakfast included for two people</strong>.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-family"></use></svg> <span>The standard room rate is good for <strong>two adults</strong> and a maximum of <strong>two kids</strong> who are 12 years old and below.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-leaf"></use></svg> <span>Guests are provided free use of the <strong>swimming pool</strong>, and select rooms also include <strong>gym access</strong>.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-crown"></use></svg> <span>A maximum of <strong>four adults</strong> is allowed per room.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-coin"></use></svg> <span>There is an additional charge of <strong>Php 1,500.00 per night</strong> for each extra adult.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-gift"></use></svg> <span>This extra person fee includes breakfast and a floor mattress for the 3rd and 4th person.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-note"></use></svg> <span>All rates are inclusive of service charges and applicable taxes.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-warning"></use></svg> <span>Rates are subject to change without prior notice.</span></li>
+    </ul>
+</section>
+
+<!-- HOW GUESTS CAN BOOK -->
+<section class="section rates-booking" id="rates-booking">
+    <div class="section__head reveal">
+        <p class="section__eyebrow"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg> Ready to book?</p>
+        <h2 class="section__title">How Guests Can Book</h2>
+        <p class="section__sub">Contact the hotel directly and provide your booking details</p>
+    </div>
+
+    <div class="rates-contact-grid reveal">
+        <div class="rates-contact-card rates-contact-card--pink">
+            <div class="rates-contact-icon">&#128241;</div>
+            <h3>Viber</h3>
+            <p>Look for <strong>Ms. Mhai</strong> or <strong>Ms. Nina</strong> for direct bookings.</p>
+            <p><strong>0956 561 6469</strong></p>
+        </div>
+
+        <div class="rates-contact-card rates-contact-card--blue">
+            <div class="rates-contact-icon"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-envelope"></use></svg></div>
+            <h3>Email</h3>
+            <p><a href="mailto:reservations@altadtagaytay.com.ph">reservations@altadtagaytay.com.ph</a></p>
+            <p><a href="mailto:reservations3@altadtagaytay.com.ph">reservations3@altadtagaytay.com.ph</a></p>
+        </div>
+
+        <div class="rates-contact-card rates-contact-card--green">
+            <div class="rates-contact-icon">&#9742;&#65039;</div>
+            <h3>Phone Inquiries</h3>
+            <p><strong>046 412 2028</strong></p>
+            <p><strong>0938 113 5517</strong></p>
+        </div>
+    </div>
+
+    <div class="rates-booking__note reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="img/icons.svg#icon-note"></use></svg> Before you book</h3>
+        <p>To reserve, guests must provide their <strong>full name</strong>, <strong>contact number</strong>, <strong>arrival and departure dates</strong>, <strong>number and type of room</strong>, and the <strong>number of adults and children</strong> &mdash; so it&#8217;s best to have these details ready when reaching out.</p>
+    </div>
+</section>
+
+<!-- SUBPAGE FOOTER -->
+<footer class="footer subpage-footer">
+    <a href="index.html#venue" class="btn btn--light subpage-footer__back">&larr; Back to Invitation</a>
+    <p class="footer__names">Jude &amp; Nica</p>
+    <p class="footer__date">01 &middot; 23 &middot; 2027 &mdash; Tagaytay City, Cavite, Philippines</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
